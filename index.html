@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Crown. INC</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="icon" type="image/x-icon" href="logo.png">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="Achivements.JS" defer></script>
+	<script src="InteractiveButtons.JS" defer></script>
+	<script src="index.js" defer></script>
+	<script src="ParticleEngine.JS" defer></script>
+	<script src="OpenClose.JS" defer></script>
+	<script src="fontawesome.js" defer></script>
+	<script src="Lawsuit.JS	" defer></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Faker/3.1.0/faker.min.js"></script>
+</head>
+
+<body>
+	<nav>
+		<ul>
+			<a href="index.html" style="float: left;"><img class="logo1" src="logo.png"></img></a>
+			<li style="float: left;"><a>Crown. INC</a></li>
+			<li><a id="score" style="background-color: #00800090;"></a></li>
+			<li><a id="hire" onclick="hireMenu()"><i class="fa-solid fa-person-digging"></i> Hire</a></li>
+			<li><a id="building" onclick="buildingMenu()"><i class="fa-solid fa-building-flag"></i> Buildings</a></li>
+			<li><a id="clone" onclick="cloneMenu()"><i class="fa-solid fa-copy"></i> Clone</a></li>
+			<li><a href="docs.html"><i class="fa-solid fa-book"></i> Guide</a></li>
+		</ul>
+	</nav>
+
+	<nav style="bottom: 0;">
+		<marquee style="padding: 5px;">
+			Welcome To Crown. INC! |
+			Breaking News: Another company falls victim to your growing empire. Analysts are saying your company is on track to become the biggest in the industry. |
+			In an unprecedented move, your company has just purchased a major competitor for a record-breaking amount. The acquisition has sent shockwaves through the industry. |
+			Reports are coming in that your company's profits have surpassed those of every other company in the industry combined. Experts are calling it a financial miracle. |
+			Rumors are circulating that your company is developing a groundbreaking new technology that will change the game forever. Investors are already lining up to get in on the action. |
+			Sources close to the CEO have revealed that your company is planning to launch an ambitious expansion plan, with sights set on dominating new markets across the globe. |
+			Industry tycoon buys out all coffee shops in town, caffeine addicts in panic! |
+			Rumors of insider trading surround major corporation's sudden stock spike |
+			Competing company launches aggressive marketing campaign, offers free puppies with purchase |
+			Environmentalists protest company's mass deforestation tactics |
+			CEO's luxurious vacation sparks public outrage as employees continue to work overtime |
+		</marquee>
+	</nav>
+
+	<div class="overlay" style="display: none;" id="EmployeeMenu">
+		<div class="form">
+			<p>Employees: <span id="employee-count">0</span></p>
+			<p>Employee cost: $<span type="number" id="employee-cost" value="10" min="10" max="100"></span><br><br>
+				<input type="button" id="hire-button" value="Hire Employees">
+		</div>
+	</div>
+
+	<div id="building-container" class="overlay" style="display: none;">
+		<p>Buildings:</p>
+	</div>
+
+	<div id="repo-container" class="overlay" style="display: none;">
+		<p>Repos and companies to clone (or steal):</p>
+	</div>
+
+	<div class="overlayright">
+		<p>Stats:</p>
+		<div class="buildingCard">
+			<h3><i class="fa-solid fa-money-bill"></i> Money</h3>
+			<p id="score-stat"></p>
+		</div>
+		<div class="buildingCard">
+			<h3><i class="fa-solid fa-person-digging"></i> Employees</h3>
+			<p id="employee-stat-count"></p>
+		</div>
+		<div class="buildingCard">
+			<h3><i class="fa-solid fa-building-flag"></i> Building Earnings</h3>
+			<p id="building-stat"></p>
+		</div>
+		<div class="buildingCard">
+			<h3><i class="fa-solid fa-copy"></i> Stolen Repository Earnings</h3>
+			<p id="repo-stat"></p>
+		</div>
+		<div class="buildingCard">
+			<h3><i class="fa-solid fa-thumbs-up"></i> Total Respect</h3>
+			<p id="respect-stat"></p>
+		</div>
+
+		<br><p>Achievements:</p>
+		<div id="achievements-list">
+
+		</div>
+	</div>
+
+	<div id="building-container" class="overlay" style="display: none;">
+		<p>Buildings:</p>
+	</div>
+
+	<div id="lawsuitbox" class="overlay" style="display: none;">
+		<p><span id="companyname">0</span> Has brought you to court!</p>
+	</div>
+
+	<header>
+		<div>
+			<h1 style="text-shadow: 2px 2px 10px #000;">You Have Earned: <span id="score-stat-too">0</span></h1>
+			<button id="cookie">
+				<i class="fa-solid fa-book-bookmark"></i><br>
+				New Repo
+			</button>
+		</div>
+	</header>
+
+	<canvas id="cookie-particles"></canvas>
+</body>
+
+</html>
