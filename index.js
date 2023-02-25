@@ -122,7 +122,6 @@ function updateBuildingCosts() {
     buildings.forEach(element => {
         if (buildingAmount != 0) {
             var totalCost = element.cost * buildingAmount
-            console.log(totalCost)
         } else {
             var totalCost = element.cost
         }
@@ -147,7 +146,7 @@ function updateBuildingCosts() {
         card.appendChild(title)
 
         let price = document.createElement('p')
-        price.innerText = element.desc + " $" + totalCost;
+        price.innerHTML = element.desc + "<span class='price'> $" + totalCost + "</span>";
         card.appendChild(price)
 
         buildingDOMlist.appendChild(card)
@@ -230,7 +229,7 @@ function updateRepoCosts() {
         card.appendChild(title)
 
         let price = document.createElement('p')
-        price.innerText = element.desc + " $" + totalCost;
+        price.innerHTML = element.desc + "<span class='price'> $" + totalCost + "</span>";
         card.appendChild(price)
 
         cloneDOMlist.appendChild(card)

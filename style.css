@@ -325,3 +325,7 @@ input {
 		transform: translateX(0);
 	}
 }
+
+.price {
+	color: #008000;
+}
