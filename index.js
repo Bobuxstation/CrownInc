@@ -122,6 +122,7 @@ function updateBuildingCosts() {
     buildings.forEach(element => {
         if (buildingAmount != 0) {
             var totalCost = element.cost * buildingAmount
+            console.log(totalCost)
         } else {
             var totalCost = element.cost
         }
@@ -134,6 +135,10 @@ function updateBuildingCosts() {
                 score -= totalCost;
                 buildingAmount += element.increment;
                 localStorage.setItem("buildingAmount", buildingAmount);
+                buildingDOMlist.innerHTML = `
+                <p>Buildings:</p>
+                `
+                updateBuildingCosts()
             }
         }
 
@@ -213,6 +218,10 @@ function updateRepoCosts() {
                 score -= totalCost;
                 clonedAmount += element.increment;
                 localStorage.setItem("clonedAmount", clonedAmount);
+                cloneDOMlist.innerHTML = `
+                <p>Repos and companies to clone (or steal):</p>
+                `
+                updateRepoCosts()
             }
         }
 
