@@ -58,7 +58,7 @@ hireButton.addEventListener("click", function () {
 function updateEmployeeCount() {
     employeeCount.innerText = numEmployees;
     employeeStatCount.innerText = numEmployees;
-    employeeCostInput.innerText = 10 * (numEmployees + 1);
+    employeeCostInput.innerText = "$" + (10 * (numEmployees + 1));
 }
 
 // Initialize building related elements
